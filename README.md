@@ -273,12 +273,12 @@ TODO
 * Provide chef recipes for server provisioning
 * Consult the project's [`issue list`][17] for complete list.
 
-[18]: https://github.com/loginx/rails-wedding/issues?state=open
+[17]: https://github.com/loginx/rails-wedding/issues?state=open
 
 License
 =======
 
 This work is licensed under a 
-[Creative Commons Attribution-ShareAlike 3.0 Unported License][19].
+[Creative Commons Attribution-ShareAlike 3.0 Unported License][18].
 
-[19]: http://creativecommons.org/licenses/by-sa/3.0/ "CC ShareAlike License"
+[18]: http://creativecommons.org/licenses/by-sa/3.0/ "CC ShareAlike License"
