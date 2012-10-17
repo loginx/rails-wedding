@@ -1,0 +1,16 @@
+A new RSVP submission was created on xjdecember.com
+
+Here are the submission details:
+
+<% @rsvp.guests.each_with_index do |guest, index| %>
+  <%= '-' * 50 %>
+  <% if @rsvp.guests.length > 1 %>
+    Guest <%= index + 1 %>:
+  <% end %>
+
+  Guest Name: <%= guest.name %>
+  Guest Email: <%= guest.email %>
+  Dietary Considerations: <%= guest.diet %>
+  Attending? <%= (guest.attending ? 'YES' : 'NO') %>
+
+<% end %>

@@ -1,0 +1,25 @@
+%h2
+  RSVP Submission Details
+%p
+  Your RSVP submission has been saved. Here are the details you sent:
+- @rsvp.guests.each_with_index do |guest, index|
+  .well
+    - if @rsvp.guests.length > 1
+      %h3= "Guest #{index+1}:"
+    %p
+      %strong
+        Guest Name:
+      = guest.name
+    %p
+      %strong
+        Guest Email:
+      = guest.email
+    - if guest.diet.present?
+      %p
+        %strong
+          Dietary Restrictions:
+        = guest.diet
+    %p
+      %strong
+        Attending?
+      = (guest.attending ? 'Yes' : 'No').upcase

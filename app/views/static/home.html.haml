@@ -1,0 +1,34 @@
+- photos_alt = "Photos Courtesy of J. Amlin Photography"
+
+- photos_caption = capture_haml do
+  .carousel-caption
+    %h4
+      Photos courtesy of
+      %a{:href => "http://www.jamlinphotography.com/", :target => "_blank"}
+        J. Amlin Photography
+
+.hero-unit.intro
+  %h2.page-header
+    Xavier Spriet and Juliane Meloche
+    %small
+      Saturday, December 29, 2012
+  %p.center
+    #carousel.carousel.slide
+      .carousel-inner
+        .item.active
+          %img{:width => 720, :height => 480, src: image_path("carousel/1.jpeg")}
+          = photos_caption
+        - (2..5).each do |i|
+          .item
+            %img{:width => 720, :height => 480, src: image_path("carousel/#{i}.jpeg")}
+            = photos_caption
+      %a.carousel-control.left{href: "#carousel", data: {slide: 'prev'}}
+        &lsaquo;
+      %a.carousel-control.right{href: "#carousel", data: {slide: 'next'}}
+        &rsaquo;
+
+- content_for :footer do
+  :javascript
+    $(function() {
+      $('.carousel').carousel();
+    });

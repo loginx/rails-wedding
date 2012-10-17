@@ -1,0 +1,9 @@
+.nested-fields.well
+  = link_to_remove_association f, :class => "close" do
+    %span{:title => "Click here to remove this guest.", :rel => :tooltip}
+      &times;
+  %h3 Guest Information
+  = f.input :name
+  = f.input :email
+  = f.input :diet, :input_html => {:data => {:provide => :typeahead, :source => '["Gluten Free", "Vegetarian", "Vegan"]'}}
+  = f.input :attending, :as => :radio_buttons, :item_wrapper_class => :inline, :default => true, :checked => true

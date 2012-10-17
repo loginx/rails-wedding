@@ -1,0 +1,15 @@
+# logrotate.erb.conf
+# Logrotate config for <%= application %>
+# Generated at <%= Time.now.strftime("%d.%m.%Y, %H:%M") %>
+<%= shared_path %>/log/*.log {
+  daily
+  missingok
+  rotate 14
+  compress
+  delaycompress
+  sharedscripts
+  olddir <%= shared_path %>/log/old
+  postrotate
+    test ! -f /opt/nginx/logs/nginx.pid || kill -USR1 `cat /opt/nginx/logs/nginx.pid`
+  endscript
+}

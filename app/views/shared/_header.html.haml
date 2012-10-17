@@ -1,0 +1,8 @@
+%header.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.brand{href: root_path}
+        Xavier &amp; Juliane
+      %ul.nav
+        - get_nav_data.each_pair do |key, val|
+          %li{:class => (current_page?(val) ? :active : '')}= link_to key.to_s.gsub('_', ' '), val

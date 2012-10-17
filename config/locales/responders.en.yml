@@ -1,0 +1,15 @@
+en:
+  flash:
+    actions:
+      create:
+        notice: '%{resource_name} was successfully created.'
+      update:
+        notice: '%{resource_name} was successfully updated.'
+      destroy:
+        notice: '%{resource_name} was successfully destroyed.'
+        alert: '%{resource_name} could not be destroyed.'
+    rsvps:
+      create:
+        notice: "Thank you. We'll email all the guests you just RSVP'd for shortly."
+      update:
+        notice: "Your RSVP submission details were updated successfully."

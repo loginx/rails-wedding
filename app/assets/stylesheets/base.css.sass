@@ -1,0 +1,34 @@
+.hidden
+  display: none
+
+body
+  padding-top: 60px
+  padding-bottom: 40px
+
+[data-href]
+  cursor: pointer
+
+#carousel
+  width: 720px
+  margin: auto
+
+.hoverable
+  border-color: #ccc
+  &:hover
+    border-color: darken(#ccc, 20%)
+    +box-shadow(0 0 6px #ccc)
+
+h1, h2, h3, .intro, .mini-carousel
+  font-family: 'Apple Chancery', 'Playball', cursive
+
+.center
+  text-align: center
+
+iframe.gmap
+  display: block
+  margin-bottom: 20px
+
+.text-important
+  margin-left: 5px
+  line-height: 13px
+  vertical-align: middle

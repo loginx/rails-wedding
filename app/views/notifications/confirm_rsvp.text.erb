@@ -1,0 +1,11 @@
+Your RSVP submission was created on xjdecember.com
+
+Here are the details of your RSVP Status:
+
+  Guest Name: <%= @guest.name %>
+  Guest Email: <%= @guest.email %>
+  Dietary Considerations: <%= @guest.diet %>
+  Attending? <%= (@guest.attending ? 'YES' : 'NO') %>
+
+To change your submission details, use the following link:
+<%= edit_rsvp_path(@guest.rsvp, :only_path => false) %>

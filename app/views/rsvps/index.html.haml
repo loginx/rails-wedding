@@ -1,0 +1,15 @@
+%h1 Listing rsvps
+%table
+  %tr
+    %th Ip address
+    %th
+    %th
+    %th
+  - @rsvps.each do |rsvp|
+    %tr
+      %td= rsvp.ip_address
+      %td= link_to 'Show', rsvp
+      %td= link_to 'Edit', edit_rsvp_path(rsvp)
+      %td= link_to 'Destroy', rsvp, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Rsvp', new_rsvp_path

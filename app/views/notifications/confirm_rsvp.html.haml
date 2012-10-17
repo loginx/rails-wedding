@@ -1,0 +1,28 @@
+- content_for :header do
+  %h2
+    Your RSVP Submission on xjdecember.com
+
+%p
+  Here are the details of the your RSVP status:
+  .well
+    %p
+      %strong
+        Guest Name:
+      = @guest.name
+    %p
+      %strong
+        Guest Email:
+      = @guest.email
+    - if @guest.diet.present?
+      %p
+        %strong
+          Dietary Restrictions:
+        = @guest.diet
+    %p
+      %strong
+        Attending?
+      = (@guest.attending ? 'YES' : 'NO')
+
+%p
+  To change your submission details, use the following link:
+  = link_to(edit_rsvp_path(@guest.rsvp, :only_path => false), edit_rsvp_path(@guest.rsvp, :only_path => false))

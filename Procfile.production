@@ -1,0 +1,2 @@
+web: bundle exec unicorn -c config/unicorn/production.rb -E production
+mailer: RAILS_ENV="production" bundle exec sidekiq

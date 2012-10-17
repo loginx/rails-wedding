@@ -1,0 +1,23 @@
+= simple_form_for(@rsvp, :html => {:class => 'form-horizontal' }) do |f|
+  = f.error_notification
+  #guests
+    = f.simple_fields_for :guests do |guest|
+      = render 'guest_fields', :f => guest
+    .links
+      = link_to_add_association f, :guests, :class => 'btn btn-primary', :render_options => {:wrapper => 'bootstrap' } do
+        %i.icon-plus
+        Add Another Guest
+  .form-actions
+    .hidden
+      = f.button :submit, "RSVP", :disable_with => 'Please wait ...'
+    %a{:class => "btn btn-success", :data => {:role => :submit, :disable_with => "Saving..."}}
+      %i.icon-glass
+      Submit RSVP
+
+- content_for :footer do
+  :javascript
+    $(function() {
+      $('body').tooltip({
+        selector: '[rel=tooltip]'
+      });
+    });

@@ -1,0 +1,13 @@
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=UTF-8'}
+    %title= content_for?(:title) ? yield(:title) : ENV['SITE_TITLE']
+
+    -# The premailer-rails3 gem will take care of converting the stylesheet.
+    = stylesheet_link_tag 'email'
+
+  %body{'leftmargin' => 0, 'marginwidth' => 0, 'topmargin' => 0, 'marginheight' => 0, 'offset' => 0}
+    .container
+      .header= content_for?(:header) ? yield(:header) : ENV['DEFAULT_EMAIL_HEADER']
+      .main= yield
+      .footer= content_for?(:footer) ? yield(:footer) : ENV['DEFAULT_EMAIL_FOOTER']

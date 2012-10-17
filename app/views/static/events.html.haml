@@ -1,0 +1,88 @@
+%h1.page-header
+  Events
+
+.well.well-large
+  %h1
+    Wedding Ceremony
+  %p.lead
+    Join us in celebrating Xavier and Juliane's marriage on December 29th, 2012 at 2PM.
+  %p
+    The ceremony will be officiated by Father Bill Riegel, at Our Lady of Assumption Church, which
+    is located near the Ambassador Bridge.
+
+    %address
+      %strong
+        Our Lady of Assumption Church
+      %br/
+      350 Huron Church Road
+      %br/
+      Windsor, Ontario
+      %br/
+      N9C 2J9
+    
+  %ul.thumbnails
+    %li.span5
+      .thumbnail.mini-carousel
+        .carousel.slide#carousel-ceremony
+          .carousel-inner
+            %img.active.item{:src => image_path("church/1.jpg")}
+            - (2..6).each do |i|
+              %img.item{:src => image_path("church/#{i}.jpg")}
+          %a.carousel-control.left{:href => '#carousel-ceremony', :data => {:slide => 'prev'}}
+            &lsaquo;
+          %a.carousel-control.right{:href => "#carousel-ceremony", :data => {:slide => 'next'}}
+            &rsaquo;
+        %small
+          Our Lady of Assumption Church
+    %li.span5
+      .thumbnail
+        %iframe.gmap{:frameborder => "0", :height => "275", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => raw("https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=assumption+church,+windsor,+on&amp;sll=42.309054,-83.070502&amp;sspn=0.020819,0.045404&amp;gl=ca&amp;ie=UTF8&amp;hq=assumption+church,+windsor,+on&amp;t=m&amp;ll=42.309054,-83.070502&amp;spn=0.008728,0.01605&amp;z=15&amp;iwloc=near&amp;output=embed"), :width => "370"}
+        %small
+          %a{:href => raw("https://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=assumption+church,+windsor,+on&amp;sll=42.309054,-83.070502&amp;sspn=0.020819,0.045404&amp;gl=ca&amp;ie=UTF8&amp;hq=assumption+church,+windsor,+on&amp;t=m&amp;ll=42.309054,-83.070502&amp;spn=0.008728,0.01605&amp;z=15&amp;iwloc=near"), :style => "color:#0000FF;text-align:left"} View Larger Map
+
+.well.well-large
+  %h1
+    Wedding Reception
+  %p
+    The wedding reception venue is
+    %strong
+      Other Place Catering
+    located near the Farmer's Market at the intersection of Walker Rd. and Ottawa St.
+
+    %address
+      %strong
+        Other Place Catering
+      %br/
+      1395 Walker Road
+      %br/
+      Windsor, Ontario
+      %br/
+      N8Y 2N9
+  %p
+    The wedding reception will start at 6PM and will include dinner,
+    an open bar, speeches and dances.
+  %ul.thumbnails
+    %li.span5
+      .thumbnail.mini-carousel
+        .carousel.slide#carousel-reception
+          .carousel-inner
+            %img.active.item{:src => image_path("reception/1.jpg")}
+            - (2..3).each do |i|
+              %img.item{:src => image_path("reception/#{i}.jpg")}
+          %a.carousel-control.left{:href => '#carousel-reception', :data => {:slide => 'prev'}}
+            &lsaquo;
+          %a.carousel-control.right{:href => "#carousel-reception", :data => {:slide => 'next'}}
+            &rsaquo;
+        %small
+          Other Place Catering &amp; Reception Hall
+    %li.span5
+      .thumbnail
+        %iframe.gmap{:frameborder => "0", :height => "275", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => raw("https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1395+Walker,+Windsor,+ON+N8Y+2N9&amp;aq=&amp;sll=42.332915,-83.037071&amp;sspn=0.158371,0.363235&amp;gl=ca&amp;ie=UTF8&amp;hq=&amp;hnear=1395+Walker+Rd,+Windsor,+Ontario+N8W+5M1&amp;t=m&amp;ll=42.31172,-83.000593&amp;spn=0.017455,0.03253&amp;z=14&amp;iwloc=near&amp;output=embed"), :width => "370"}
+        %small
+          %a{:href => raw("https://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=1395+Walker,+Windsor,+ON+N8Y+2N9&amp;aq=&amp;sll=42.332915,-83.037071&amp;sspn=0.158371,0.363235&amp;gl=ca&amp;ie=UTF8&amp;hq=&amp;hnear=1395+Walker+Rd,+Windsor,+Ontario+N8W+5M1&amp;t=m&amp;ll=42.31172,-83.000593&amp;spn=0.017455,0.03253&amp;z=14&amp;iwloc=A"), :style => "color:#0000FF;text-align:left"} View Larger Map
+
+- content_for :footer do
+  :javascript
+    $(function() {
+      $('.carousel').carousel();
+    });
