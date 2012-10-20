@@ -112,7 +112,7 @@ somebody else:
 RSVP Management for guests
 --------------------------
 
-The submission process allows the visitor to RSVP for an arbitrary amount of
+The submission process allows the visitor to RSVP for an arbitrary number of
 guests.
 
 I've used the [`cocoon`][2] gem to dynamically add/remove guest forms to the
@@ -187,7 +187,7 @@ Process Automation
 ------------------
 
 I use the [`foreman`][7] gem to manage the processes the app depends on. I 
-provided the `Procfile` and Procfile.production` files to define what those 
+provided the `Procfile` and `Procfile.production` files to define what those 
 processes are.
 
 In development mode, simply type `foreman start` and the app will instantiate
