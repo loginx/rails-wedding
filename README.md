@@ -20,6 +20,8 @@ Most of the configuration is stored into environment variables. I'm using the
 [`dotenv`][1] gem to allow you to provide different values in development than
 in production.
 
+[1]: https://github.com/bkeepers/dotenv "dotenv on Github"
+
 
 ### In Development
 
