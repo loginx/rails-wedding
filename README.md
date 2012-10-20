@@ -96,6 +96,7 @@ SITE_NAME=yourdomain.com
 SITE_TITLE=X and Y, Month Day, Year
 DEFAULT_EMAIL_FOOTER=
 DEFAULT_EMAIL_HEADER=
+NOTIFICATION_EMAIL=you@yourdomain.com
 
 # Google Analytics ID for tracking
 GOOGLE_ANALYTICS_ID=UA-XXX-X

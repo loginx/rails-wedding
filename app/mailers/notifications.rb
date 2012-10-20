@@ -1,12 +1,12 @@
 class Notifications < ActionMailer::Base
   layout 'notifications'
-  default from: "no-reply@xjdecember.com", bcc: "xavier@madpython.com", reply_to: 'xavier@madpython.com'
+  default from: ENV['DEVISE_EMAILS_FROM']
 
   def dispatch_rsvp(rsvp)
     Rails.logger.warn("RSVP from mailer: #{rsvp.inspect}")
     @rsvp = Rsvp.find(rsvp['id'])
 
-    mail(to: "xavier@madpython.com", subject: "[RSVP] New wedding RSVP submission")
+    mail(to: ENV['NOTIFICATION_EMAIL'], subject: "[RSVP] New wedding RSVP submission")
   end
 
   def confirm_rsvp(guest)
