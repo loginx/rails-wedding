@@ -10,7 +10,7 @@ default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 set :deploy_via, :remote_cache
 set :use_sudo, false
-set :rails_env, :production
+set :rails_env, 'production'
 set :user, 'xavier'
 
 # RVM config
