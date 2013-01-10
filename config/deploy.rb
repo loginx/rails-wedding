@@ -2,7 +2,7 @@ require 'capistrano_colors'
 load 'config/recipes/foreman'
 
 set :application, "xjwedding"
-set :repository,  "git@github.com:loginx/xjwedding.git"
+set :repository,  "git@github.com:loginx/rails-wedding.git"
 
 set :scm, :git
 
