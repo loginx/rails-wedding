@@ -15,7 +15,7 @@ set :user, 'xavier'
 
 # RVM config
 set :rvm_ruby_string, "1.9.3@#{application}"
-set :rvm_install_type, :stable
+set :rvm_install_type, :head
 
 
 # Foreman config
