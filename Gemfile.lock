@@ -83,7 +83,7 @@ GEM
       addressable
       rdoc
     daemons (1.1.9)
-    devise (2.2.0)
+    devise (2.2.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
@@ -170,7 +170,7 @@ GEM
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
       net-ssh (>= 2.0.9)
-    net-ssh (2.6.2)
+    net-ssh (2.6.3)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     nokogiri (1.5.6)
@@ -274,8 +274,8 @@ GEM
       activemodel (~> 3.0)
       railties (~> 3.0)
     temple (0.5.5)
-    therubyracer (0.11.1)
-      libv8 (~> 3.11.8.7)
+    therubyracer (0.11.2)
+      libv8 (~> 3.11.8.12)
       ref
     thin (1.5.0)
       daemons (>= 1.0.9)
@@ -287,7 +287,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    turbo-sprockets-rails3 (0.3.5)
+    turbo-sprockets-rails3 (0.3.6)
       railties (> 3.2.8, < 4.0.0)
       sprockets (>= 2.0.0)
     tzinfo (0.3.35)
@@ -328,7 +328,7 @@ DEPENDENCIES
   meta_search (>= 1.1.0.pre)
   pg
   premailer-rails3
-  rails (= 3.2.11)
+  rails (~> 3.2)
   responders
   rfc-822
   rspec-rails
