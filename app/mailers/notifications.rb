@@ -6,7 +6,7 @@ class Notifications < ActionMailer::Base
     Rails.logger.warn("RSVP from mailer: #{rsvp.inspect}")
     @rsvp = Rsvp.find(rsvp['id'])
 
-    mail(to: ENV['NOTIFICATION_EMAIL'].dup, subject: "[RSVP] New wedding RSVP submission")
+    mail(to: ENV['NOTIFICATION_EMAIL'].dup.split(';'), subject: "[RSVP] New wedding RSVP submission")
   end
 
   def confirm_rsvp(guest)
